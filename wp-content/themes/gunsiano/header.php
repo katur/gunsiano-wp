@@ -67,6 +67,7 @@
 ?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.8.2.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/contact-info.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/publications.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

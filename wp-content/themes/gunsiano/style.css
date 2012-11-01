@@ -2701,7 +2701,11 @@ p.comment-form-comment {
 	margin: 0 2%;
 }
 
-/* Project page
+.contact-bar {
+	width: 50%;
+}
+
+/* Projects page
 ----------------------------------------------- */
 .entry-content .project-table td {
 	vertical-align: top;
@@ -2713,7 +2717,19 @@ p.comment-form-comment {
 	margin: 0;
 }
 
-/* Global shit
+/* Publications
+------------------------------------------------*/
+.publication {
+	margin: 4% 0;
+}
+
+.journal {
+	font-weight: bold;
+	margin-right: 2%;
+}
+
+
+/* Global stuff
 ----------------------------------------------- */
 a.active {
 	text-decoration: underline;

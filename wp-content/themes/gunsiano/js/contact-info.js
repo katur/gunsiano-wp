@@ -2,10 +2,10 @@ $(function(){
 	togglePhone();
 	toggleLab();
 	toggleRoom();
-	selectDefaults();
+	selectDefaultAddress();
 })
 
-selectDefaults = function(){
+selectDefaultAddress = function(){
 	$("[data-phone]").first().trigger("click");
 	$("[data-lab]").first().trigger("click");
 	$("[data-address-type]").first().trigger("click");
