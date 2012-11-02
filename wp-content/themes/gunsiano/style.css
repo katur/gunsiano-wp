@@ -13,7 +13,7 @@ Text Domain: twentyeleven
 -------------------------------------------------------------- */
 
 
-/* Include Computer Modern fonts */
+/* Include Computer Modern fonts: Serif, Sans, and Bright */
 @font-face {
 	font-family: 'Computer Modern Serif';
 	src: url('computer_modern_fonts/Serif/cmunrm.eot');
@@ -60,6 +60,100 @@ Text Domain: twentyeleven
 	font-weight: bold;
 	font-style: italic;
 }
+
+@font-face {
+	font-family: 'Computer Modern Sans';
+	src: url('computer_modern_fonts/Sans/cmunss.eot');
+	src: url('computer_modern_fonts/Sans/cmunss.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Sans/cmunss.woff') format('woff'),
+		 url('computer_modern_fonts/Sans/cmunss.ttf') format('truetype'),
+		 url('computer_modern_fonts/Sans/cmunss.svg#cmunss') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Sans';
+	src: url('computer_modern_fonts/Sans/cmunsx.eot');
+	src: url('computer_modern_fonts/Sans/cmunsx.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Sans/cmunsx.woff') format('woff'),
+		 url('computer_modern_fonts/Sans/cmunsx.ttf') format('truetype'),
+		 url('computer_modern_fonts/Sans/cmunsx.svg#cmunsx') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Sans';
+	src: url('computer_modern_fonts/Sans/cmunsi.eot');
+	src: url('computer_modern_fonts/Sans/cmunsi.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Sans/cmunsi.woff') format('woff'),
+		 url('computer_modern_fonts/Sans/cmunsi.ttf') format('truetype'),
+		 url('computer_modern_fonts/Sans/cmunsi.svg#cmunsi') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Sans';
+	src: url('computer_modern_fonts/Sans/cmunso.eot');
+	src: url('computer_modern_fonts/Sans/cmunso.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Sans/cmunso.woff') format('woff'),
+		 url('computer_modern_fonts/Sans/cmunso.ttf') format('truetype'),
+		 url('computer_modern_fonts/Sans/cmunso.svg#cmunso') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Computer Modern Bright';
+	src: url('computer_modern_fonts/Bright/cmunbmr.eot');
+	src: url('computer_modern_fonts/Bright/cmunbmr.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Bright/cmunbmr.woff') format('woff'),
+		 url('computer_modern_fonts/Bright/cmunbmr.ttf') format('truetype'),
+		 url('computer_modern_fonts/Bright/cmunbmr.svg#cmunbmr') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Computer Modern Bright';
+	src: url('computer_modern_fonts/Bright/cmunbbx.eot');
+	src: url('computer_modern_fonts/Bright/cmunbbx.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Bright/cmunbbx.woff') format('woff'),
+		 url('computer_modern_fonts/Bright/cmunbbx.ttf') format('truetype'),
+		 url('computer_modern_fonts/Bright/cmunbbx.svg#cmunbbx') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Computer Modern Bright';
+	src: url('computer_modern_fonts/Bright/cmunbmo.eot');
+	src: url('computer_modern_fonts/Bright/cmunbmo.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Bright/cmunbmo.woff') format('woff'),
+		 url('computer_modern_fonts/Bright/cmunbmo.ttf') format('truetype'),
+		 url('computer_modern_fonts/Bright/cmunbmo.svg#cmunbmo') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Computer Modern Bright';
+	src: url('computer_modern_fonts/Bright/cmunbxo.eot');
+	src: url('computer_modern_fonts/Bright/cmunbxo.eot?#iefix') format('embedded-opentype'),
+		 url('computer_modern_fonts/Bright/cmunbxo.woff') format('woff'),
+		 url('computer_modern_fonts/Bright/cmunbxo.ttf') format('truetype'),
+		 url('computer_modern_fonts/Bright/cmunbxo.svg#cmunbxo') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+
 
 
 html, body, div, span, applet, object, iframe,
@@ -607,6 +701,7 @@ a:hover {
 }
 #access ul {
 	font-size: 16px; /*13px*/
+	font-family: "Computer Modern Bright", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	list-style: none;
 	margin: 0 0 0 -0.8125em;
 	padding-left: 0;
@@ -775,7 +870,7 @@ a:hover {
 .entry-title {
 	clear: both;
 	color: #222;
-	font-size: 12px; /*26px*/
+	font-size: 26px;
 	font-weight: bold;
 	line-height: 1.5em;
 	padding-bottom: .3em;
@@ -817,7 +912,8 @@ a:hover {
 }
 .entry-content h3,
 .comment-content h3 {
-	font-size: 10px;
+	clear: none;
+	font-size: 13px; /*10px*/
 	letter-spacing: 0.1em;
 	line-height: 2.6em;
 	text-transform: uppercase;
@@ -1145,8 +1241,9 @@ article.format-status .entry-content {
 }
 .singular .entry-title {
 	color: #000;
-	font-size: 24px; /*36px*/
-	font-weight: bold;
+	font-size: 30px; /*36px*/
+	font-weight: normal;
+	font-family: "Computer Modern Bright", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 48px;
 }
 .singular .entry-title,
