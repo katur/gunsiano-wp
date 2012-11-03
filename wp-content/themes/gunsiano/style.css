@@ -1241,7 +1241,7 @@ article.format-status .entry-content {
 }
 .singular .entry-title {
 	color: #000;
-	font-size: 30px; /*36px*/
+	font-size: 24px; /*36px*/
 	font-weight: normal;
 	font-family: "Computer Modern Bright", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 48px;
@@ -2842,6 +2842,8 @@ p.comment-form-comment {
 	width: 100%; 
 } 
 
+
+/* STYLES KATHERINE ADDED */
 /* Two-column: Used on Lab Members page
 ----------------------------------------------- */
 .two-column {
@@ -2886,4 +2888,269 @@ a.active {
 a.no-style {
 	text-decoration: none;
 	color: black;
+}
+
+/* STYLES FROM KATHERINE'S OLD SITE 
+--------------------------------------------------*/
+
+/* Copyright (c) 2010-2012 Katherine Erickson */
+
+/* ~~~~~~~~ GLOBAL STYLES ~~~~~~~~ */
+.invisible {
+	display: none;
+}
+
+/* ~~~~~~~~ SEARCH FORM ~~~~~~~~~~~*/
+.smallMessage {
+	color: #666; 
+	font-size: 13px;
+}
+
+.searchForm {
+	float: right;
+}
+
+.strainSearch {
+	float: right;
+	clear: both;
+}
+
+/* ~~~~~~~~ STRAINS PAGE ~~~~~~~~ */
+
+#strains {
+	width: 100%;
+	margin: 20px 0;
+	border: solid #AAA;
+	border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#strains td {
+    border: solid #AAA;
+    border-width: 1px 1px 0 0;
+	margin: 0;
+	padding: 6px;
+}
+
+#topRow td {
+	text-align: center;
+	background: #000;
+	color: #FFF;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+/* ~~~~~~~~ STRAIN PAGE ~~~~~~~~ */
+
+#strainName {
+	width: 100%;
+	clear: both;
+	text-align: center;
+	background: #000;
+	color: #FFF;
+	font-size: 18px;
+	padding: 6px 0px;
+}
+
+
+.strainSection {
+	width: 100%;
+	clear: both;
+	float: left; 
+	margin: 3% 0;
+}
+
+.strainSection h2 {
+	color: #777;
+	font-size: 18px;
+	text-align: center;
+}
+
+.strainData {
+	float: left;
+	padding: 10px 30px;
+}
+
+.freezeData {
+	float: left;
+	width: 33%;
+}
+
+.line {
+	clear: both;
+	background: #AAA;
+	height: 1px;
+	width: 70%;
+	margin: 5% 15%;
+}
+
+
+/* ~~~~~~~~ STAMP VISUALIZATION ~~~~~~~~ */
+
+div.status0 {
+	/*background: #57492C;*/
+	background: #635335;
+}
+
+div.status1 {
+	background: #D5AA02;
+}
+
+div.status2 {
+	background: #4B2;
+}
+
+div#hoverClone {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	background: #DDD;
+	border: 1px solid #AAA;
+	padding: 5px;
+	display: none;
+}
+
+/* ~~~~~~~~ STAMP VISUALIZATION: LARGE SIZE (LIBRARY_VIEW) ~~~~~~~~ */
+
+div.plate {
+	width: 684px;
+	height: 456px;
+	background: #635335;
+	border: 5px solid #635335;
+	margin: 0 auto;
+}
+
+div.well {
+	float: left;
+	border: 1px solid #635335; 
+	width: 45px;
+	height: 45px;
+	margin: 5px;
+	color: #DDD;
+}
+
+/* ~~~~~~~~ STAMP VISUALIZATION: SMALL SIZE (PLATE_RECORDS) ~~~~~~~~ */
+
+div.plateRow {
+	float: left;
+	clear: both;
+}
+
+
+div.plateWrap {
+	text-align: center;
+	width: 372px;
+	float: left;
+	margin-left: 72px;
+}
+
+div.plateSmall {
+	width: 372px;
+	height: 248px;
+	background: #635335;
+	border: 5px solid #635335;
+}
+
+div.wellSmall {
+	float: left;
+	border: 1px solid #635335;
+	width: 25px;
+	height: 25px;
+	margin: 2px;
+	color: #EEE;
+	font-size: 12px;	
+}
+
+div.badMatch {
+	color: #F00;
+}
+
+div.comments {
+	text-align: left;
+	font-size: 12px;
+}
+
+/* ~~~~~~~~ STAMP VISUALIZATION: MEDIUM SIZE (NEW_STAMP) ~~~~~~~~ */
+
+div.plateMedium {
+	width: 636px;
+	height: 368px;
+	background: #635335;
+	border: 5px solid #635335;
+	margin: 0 auto;
+}
+
+div.wellMedium {
+	float: left;
+	border: 1px solid #635335; 
+	width: 40px;
+	height: 40px;
+	margin: 2px;
+	color: #DDD;
+}
+
+/* ~~~~~~~~ NEW_STAMP PAGE ~~~~~~~~ */
+
+div.commentButton {
+	float: left;
+	border: 1px solid #666;
+	width: 5px;
+	height: 5px;
+	background: #000;
+}
+
+div.commentPopup {
+	position: absolute;
+	background: #DDD;
+	border: 1px solid #AAA;
+	padding: 5px;
+	display: none;
+}
+
+
+/* ~~~~~~~ STORAGE ~~~~~~~~~~ */
+
+div.vatImage {
+	float: left;
+	padding: 20px;
+	text-align: center;
+	
+}
+
+div#rack_view table, div#box_view table, div#vat_view table, div#tube_view table {
+	text-align: center;
+	margin: 20px 0 0 0;
+	background: #FFF;
+	border: solid #AAA;
+	border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+div#storage td {
+    border: solid #AAA;
+    border-width: 1px 1px 0 0;
+}
+
+td.wholeLink {
+	padding: 0;
+}
+
+div#rack_view table a, div#box_view table a, div#vat_view table a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 6px 0;
+}
+
+div#storage table {
+	width: 800px;
+	margin-left: 70px;
+}
+
+
+div#storage a {
+	text-decoration: none;
 }
