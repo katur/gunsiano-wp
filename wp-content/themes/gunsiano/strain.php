@@ -111,7 +111,7 @@ get_header(); ?>
 						echo "
 							<div class='line'></div>
 							<div class='strainSection'>
-								<h2>Origin</h2>
+								<h3>Origin</h3>
 							";
 						if ($author != NULL) {
 							echo "<div class='strainData'><b>Made By:</b>&nbsp;$author</div>";
@@ -136,7 +136,7 @@ get_header(); ?>
 						echo "
 							<div class='line'></div>
 							<div class='strainSection'>
-								<h2>Remarks</h2>
+								<h3>Remarks</h3>
 								<div class='strainData'>$remarks</div>
 							</div>
 						";
@@ -175,62 +175,58 @@ get_header(); ?>
 						echo " 
 							<div class='line'></div>
 							<div class='strainSection'>
-								<h2>Stock</h2>
-						";
+								<h3>Stock</h3>";
 
-						if ($received_from != NULL || $date_received != NULL) {
-							echo "<div class='strainSection'>";
-
-							if ($received_from != NULL) {
-								echo "<div class='strainData'><b>Received From:</b>&nbsp;$received_from</div>";
-							}
-
-							if ($received_by != NULL) {
-							    $query2 = "SELECT author FROM authors WHERE id = '$received_by'";
-							    $result2 = mysql_query($query2);
-            					if (!$result2) {
-            						echo 'Could not run query: ' . mysql_error();
-            						exit;
-            					}
-            					while ($row2 = mysql_fetch_assoc($result2)) {
-            					    $received_author = $row2['author'];
-            					}
-
-								echo "<div class='strainData'><b>Received By:</b>&nbsp;$received_author</div>";
-							}
-
-							if ($date_received != NULL) {
-								echo "<div class='strainData'><b>Date Received:</b>&nbsp;$date_received</div>";
-							}
-
-							echo "</div>";
+						if ($received_from != NULL) {
+							echo "<div class='strainData'><b>Received From:</b>&nbsp;$received_from</div>";
 						}
 
+						if ($received_by != NULL) {
+						    $query2 = "SELECT author FROM authors WHERE id = '$received_by'";
+						    $result2 = mysql_query($query2);
+        					if (!$result2) {
+        						echo 'Could not run query: ' . mysql_error();
+        						exit;
+        					}
+        					while ($row2 = mysql_fetch_assoc($result2)) {
+        					    $received_author = $row2['author'];
+        					}
+
+							echo "<div class='strainData'><b>Received By:</b>&nbsp;$received_author</div>";
+						}
+
+						if ($date_received != NULL) {
+							echo "<div class='strainData'><b>Date Received:</b>&nbsp;$date_received</div>";
+						}
+                        
+                        echo "</div>";
+                        
 						$letter_array=array('A','B','C','D','E','F','G','H','I');
+                        
+                        echo "<div class='strainSection'>";
+    						while ($row=mysql_fetch_assoc($result)) {
+    							// Assign variables //
+    							$vat_name = $row['vat_name'];
+    							$rack_name = $row['rack_name'];
+    							$box_name = $row['box_name'];
+    							$horizontal_position = $row['horizontal_position'];
+    							$vertical_position = $letter_array[$row['vertical_position']-1];						
+    							$freeze_date = $row['freeze_date'];
+    							$frozen_by = $row['author'];
 
-						while ($row=mysql_fetch_assoc($result)) {
-							// Assign variables //
-							$vat_name = $row['vat_name'];
-							$rack_name = $row['rack_name'];
-							$box_name = $row['box_name'];
-							$horizontal_position = $row['horizontal_position'];
-							$vertical_position = $letter_array[$row['vertical_position']-1];						
-							$freeze_date = $row['freeze_date'];
-							$frozen_by = $row['author'];
-
-							if ($freeze_date) {
-								$freeze_date = reconfigure_date($freeze_date);
-							}
+    							if ($freeze_date) {
+    								$freeze_date = reconfigure_date($freeze_date);
+    							}
 
 
-							echo "
-								<div class='freezeData'>
-									<b>$vat_name:</b>
-									$rack_name-$box_name-$vertical_position$horizontal_position<br>
-									Frozen $freeze_date by $frozen_by<br>	
-								</div>
-							";	
-						}
+    							echo "
+    								<div class='freezeData'>
+    									<b>$vat_name:</b>
+    									$rack_name-$box_name-$vertical_position$horizontal_position<br>
+    									Frozen $freeze_date by $frozen_by<br>	
+    								</div>
+    							";	
+    						}
 						echo "</div>";	
 					}
 				?>	
