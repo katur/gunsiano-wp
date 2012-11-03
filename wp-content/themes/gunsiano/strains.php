@@ -13,9 +13,7 @@ get_header(); ?>
 				<?php include_search_form("/worm-portal/worm-strains/", "", "search strains", "");?>
 				
 				<!-- Display the title -->	
-				<h1 class="entry-title">
-					<?php echo "Worm Strains";?>
-				</h1>
+				<h1 class="entry-title">Worm Strains</h1>
 				
 				<table id="strains">
     				<tr id="topRow">
