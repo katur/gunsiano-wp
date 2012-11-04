@@ -149,9 +149,10 @@ function wp_nav_menu( $args = array() ) {
 	$menu = wp_get_nav_menu_object( $args->menu );
 
 	// Get the nav menu based on the theme_location
-	if ( ! $menu && $args->theme_location && ( $locations = get_nav_menu_locations() ) && isset( $locations[ $args->theme_location ] ) )
+	if ( ! $menu && $args->theme_location && ( $locations = get_nav_menu_locations() ) && isset( $locations[ $args->theme_location ] ) ){
 		$menu = wp_get_nav_menu_object( $locations[ $args->theme_location ] );
-
+	}
+    
 	// get the first menu that has items if we still can't find a menu
 	if ( ! $menu && !$args->theme_location ) {
 		$menus = wp_get_nav_menus();

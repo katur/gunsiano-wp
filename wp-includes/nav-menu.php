@@ -19,11 +19,12 @@
  * @return mixed false if $menu param isn't supplied or term does not exist, menu object if successful.
  */
 function wp_get_nav_menu_object( $menu ) {
-	if ( ! $menu )
+	if ( ! $menu ){
 		return false;
-
+	}
+    
 	$menu_obj = get_term( $menu, 'nav_menu' );
-
+	
 	if ( ! $menu_obj )
 		$menu_obj = get_term_by( 'slug', $menu, 'nav_menu' );
 
@@ -32,7 +33,6 @@ function wp_get_nav_menu_object( $menu ) {
 
 	if ( ! $menu_obj )
 		$menu_obj = false;
-
 	return $menu_obj;
 }
 

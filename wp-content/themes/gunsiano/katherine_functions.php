@@ -6,15 +6,14 @@
         and an option message for input format. */
         function include_search_form($action_url, $message, $search_term, $small_message) {
             echo "
-                <div class= 'searchForm'>
-                <form method='GET' action='$action_url'>
+                <form class='searchForm' method='GET' action='$action_url'>
                 	$message &nbsp;
                 	<input type='text' name='search_term' value='";
                 	mysql_real_escape_string($_GET['search_term']);
                 	echo "';></input>
                 	<input type='submit' value='$search_term'></input><br>
                 	<span class='smallMessage'>$small_message</span>
-                </form></div>
+                </form>
             ";
         }
     

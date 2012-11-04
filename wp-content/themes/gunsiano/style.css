@@ -373,8 +373,9 @@ body {
 }
 .one-column.singular .entry-meta .edit-link a {
 	position: absolute;
-	left: 0;
-	top: 40px;
+	right: 0;
+	left: auto;
+	top: 30px;
 }
 .one-column.singular #author-info {
 	margin: 2.2em -8.8% 0;
@@ -2803,7 +2804,11 @@ p.comment-form-comment {
 } 
 
 
-/* STYLES KATHERINE ADDED */
+/*------------------------------------------------
+~~~~~~~~~~~ STYLES KATHERINE ADDED ~~~~~~~~~~~~~~~
+------------------------------------------------*/
+
+
 /* Two-column: Used on Lab Members page
 ----------------------------------------------- */
 .two-column {
@@ -2868,11 +2873,17 @@ a.no-style {
 
 .searchForm {
 	float: right;
+	padding-top: 15px;
 }
 
 .strainSearch {
 	float: right;
 	clear: both;
+}
+
+.no-clear {
+	clear: none;
+	max-width: 50%;
 }
 
 /* ~~~~~~~~ STRAINS PAGE ~~~~~~~~ */
@@ -2910,8 +2921,7 @@ a.no-style {
 	right: 2%;
 	width: 104%; /* to compensate for margin around strainData */
 	clear: both;
-	float: left; 
-	margin: 3% 0;
+	float: left;
 }
 
 .strainSection h3 {
@@ -2936,6 +2946,7 @@ a.no-style {
 	background: #AAA;
 	height: 1px;
 	width: 100%;
+	margin: 3% 0;
 }
 
 

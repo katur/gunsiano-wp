@@ -9,6 +9,7 @@ Copyright (c) 2010-2012 Katherine Erickson
 get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
+			    
 				<?php 
 				    include_search_form("/worm-portal/worm-strains/", "", "search strains", "");
                 	// get the strain name from the URL
@@ -69,7 +70,7 @@ get_header(); ?>
     			?>
 
     			<!-- Display the title -->	
-				<h1 class="entry-title">
+				<h1 class="entry-title no-clear">
 					<?php echo $strain;?>
 				</h1>
 

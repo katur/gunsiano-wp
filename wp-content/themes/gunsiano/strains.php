@@ -1,19 +1,18 @@
 <?php
-include("katherine_functions.php");
-include("katherine_connect.php");
+
 /*
 Template Name: Strains
 Copyright (c) 2010-2012 Katherine Erickson
 */
-
+include("katherine_functions.php");
+include("katherine_connect.php");
 get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
-				
-				<?php include_search_form("/worm-portal/worm-strains/", "", "search strains", "");?>
+				<?php include_search_form("/worm-strains/", "", "search strains", "");?>
 				
 				<!-- Display the title -->	
-				<h1 class="entry-title">Worm Strains</h1>
+				<h1 class="entry-title no-clear">Worm Strains</h1>
 				
 				<table id="strains">
     				<tr id="topRow">
@@ -92,7 +91,7 @@ get_header(); ?>
     								$search_counter++;
     								echo "
     									<tr>
-    										<td><a href='/worm-portal/worm-strain/?strain=$strain'>$strain</a></td>
+    										<td><a href='/worm-strain/?strain=$strain'>$strain</a></td>
     										<td><i>$species</i></td>
     										<td>$genotype</td>
     										<td>$author</td>
@@ -106,7 +105,7 @@ get_header(); ?>
     							if ($strain != NULL) {
     								echo "
     									<tr>
-    										<td><a href='/worm-portal/worm-strain/?strain=$strain'>$strain</a></td>
+    										<td><a href='/worm-strain/?strain=$strain'>$strain</a></td>
     										<td><i>$species</i></td>
     										<td>$genotype</td>
     										<td>$author</td>
