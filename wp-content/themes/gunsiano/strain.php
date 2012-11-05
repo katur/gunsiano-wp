@@ -215,7 +215,7 @@ get_header(); ?>
     								<div class='freeze-data'>
     									<b>$vat_name:</b>
     									$rack_name-$box_name-$vertical_position$horizontal_position<br>
-    									Frozen $freeze_date by $frozen_by<br>	
+    									frozen $freeze_date by $frozen_by<br>	
     								</div>
     							";	
     						}

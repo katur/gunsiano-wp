@@ -23,9 +23,8 @@ get_header(); ?>
     				</tr>
     				<?php
     					// Get search term if there is one
-    					if (mysql_real_escape_string($_GET["search_term"])) {
+    					if (mysql_real_escape_string($_GET["search_term"]))
     						$search_term = mysql_real_escape_string($_GET["search_term"]);
-    					}
 
     					// Query all rows in strains
     					$query = "SELECT strains.strain, strains.genotype, strains.transgene_id,
@@ -67,14 +66,12 @@ get_header(); ?>
     						$received_from = $row['received_from'];
 
     						// If genotype template code provided
-    						if (strlen($genotype) <= 2 && strlen($genotype) >= 1) {
+    						if (strlen($genotype) <= 2 && strlen($genotype) >= 1)
     							// generate genotype using the template and any relevant pieces
     							$genotype = generate_genotype($genotype, $transgene_id);
-    						}
     						
-    						if ($species == "Caenorhabditis elegans") {
+    						if ($species == "Caenorhabditis elegans")
     						    $species = "C.elegans";
-    						}
 
     						// If there is a search term, only display if matches search term
     						if ($search_term && $strain) {
@@ -114,12 +111,13 @@ get_header(); ?>
     							}
     						}
     					}
+    					
     					echo "<span class=strain-search>";
-    					if ($search_counter) {
+    					if ($search_counter)
     						echo "$search_counter out of $base_counter strains match search term '$search_term'";
-    					} else {
+    					else
     						echo "$base_counter strains";
-    					}
+    	
     					echo "</span>";
 
     				?>								

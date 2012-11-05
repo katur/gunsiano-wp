@@ -2858,8 +2858,6 @@ a.no-style {
 /* STYLES FROM KATHERINE'S OLD SITE 
 --------------------------------------------------*/
 
-/* Copyright (c) 2010-2012 Katherine Erickson */
-
 /* ~~~~~~~~ Global ~~~~~~~~ */
 .invisible {
 	display: none;
@@ -2869,7 +2867,7 @@ a.no-style {
 	text-align: center;
 }
 
-/* ~~~~~~~~ Search Form ~~~~~~~~~~~*/
+/* ~~~~~~~~ Search Form (strains, stamps) ~~~~~~~~~~~*/
 .small-message {
 	color: #666; 
 	font-size: 13px;
@@ -2890,7 +2888,7 @@ a.no-style {
 	max-width: 50%;
 }
 
-/* ~~~~~~~~ Grid-style table (strains and storage) ~~~~~~~~ */
+/* ~~~~~~~~ Grid-style table (strains, storage) ~~~~~~~~ */
 
 #grid {
 	width: 100%;
@@ -2916,7 +2914,7 @@ a.no-style {
 	font-weight: bold;
 }
 
-/* ~~~~~~~ frozen storage ~~~~~~~~~~ */
+/* ~~~~~~~ Frozen Stocks ~~~~~~~~~~ */
 
 .vat-image {
 	float: left;

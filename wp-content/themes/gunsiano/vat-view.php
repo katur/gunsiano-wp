@@ -10,8 +10,7 @@ get_header(); ?>
 			<div id="content" role="main">
 			    					
 				<h1 class="entry-title no-clear">Frozen Stocks</h1>
-				<h4>Click to see contents</h4>
-				
+								
                 <?php
 					$query = "SELECT storage_vat.vat_name, storage_vat.id AS vat_id, storage_vat.vat_image FROM storage_vat
 					";
