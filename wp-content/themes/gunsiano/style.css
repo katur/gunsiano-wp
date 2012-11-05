@@ -2860,23 +2860,27 @@ a.no-style {
 
 /* Copyright (c) 2010-2012 Katherine Erickson */
 
-/* ~~~~~~~~ GLOBAL STYLES ~~~~~~~~ */
+/* ~~~~~~~~ Global ~~~~~~~~ */
 .invisible {
 	display: none;
 }
 
-/* ~~~~~~~~ SEARCH FORM ~~~~~~~~~~~*/
-.smallMessage {
+.center td {
+	text-align: center;
+}
+
+/* ~~~~~~~~ Search Form ~~~~~~~~~~~*/
+.small-message {
 	color: #666; 
 	font-size: 13px;
 }
 
-.searchForm {
+.search-form {
 	float: right;
 	padding-top: 15px;
 }
 
-.strainSearch {
+.strain-search {
 	float: right;
 	clear: both;
 }
@@ -2886,9 +2890,9 @@ a.no-style {
 	max-width: 50%;
 }
 
-/* ~~~~~~~~ STRAINS PAGE ~~~~~~~~ */
+/* ~~~~~~~~ Grid-style table (strains and storage) ~~~~~~~~ */
 
-#strains {
+#grid {
 	width: 100%;
 	margin: 20px 0;
 	border: solid #AAA;
@@ -2897,14 +2901,14 @@ a.no-style {
     border-collapse: collapse;
 }
 
-#strains td {
+#grid td {
     border: solid #AAA;
     border-width: 1px 1px 0 0;
 	margin: 0;
 	padding: 6px;
 }
 
-#topRow td {
+#top-row td {
 	text-align: center;
 	background: #000;
 	color: #FFF;
@@ -2912,11 +2916,22 @@ a.no-style {
 	font-weight: bold;
 }
 
+/* ~~~~~~~ frozen storage ~~~~~~~~~~ */
 
-/* ~~~~~~~~ STRAIN PAGE ~~~~~~~~ */
+.vat-image {
+	float: left;
+	padding: 20px;
+	text-align: center;	
+}
 
-.strainSection {
-/*	background: #4fe;*/
+.freeze-date {
+	font-size: 14px;
+}
+
+
+/* ~~~~~~~~ Strain page ~~~~~~~~ */
+
+.strain-section {
 	position: relative;
 	right: 2%;
 	width: 104%; /* to compensate for margin around strainData */
@@ -2924,17 +2939,17 @@ a.no-style {
 	float: left;
 }
 
-.strainSection h3 {
+.strain-section h3 {
 	font-size: 16px;
 	margin-left: 2%;
 }
 
-.strainData {
+.strain-data {
 	float: left;
 	margin: 2%;
 }
 
-.freezeData {
+.freeze-data {
 	float: left;
 	width: 29%;
 	margin: 2%;
@@ -3070,50 +3085,4 @@ div.commentPopup {
 	border: 1px solid #AAA;
 	padding: 5px;
 	display: none;
-}
-
-
-/* ~~~~~~~ STORAGE ~~~~~~~~~~ */
-
-div.vatImage {
-	float: left;
-	padding: 20px;
-	text-align: center;
-	
-}
-
-div#rack_view table, div#box_view table, div#vat_view table, div#tube_view table {
-	text-align: center;
-	margin: 20px 0 0 0;
-	background: #FFF;
-	border: solid #AAA;
-	border-width: 0 0 1px 1px;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
-div#storage td {
-    border: solid #AAA;
-    border-width: 1px 1px 0 0;
-}
-
-td.wholeLink {
-	padding: 0;
-}
-
-div#rack_view table a, div#box_view table a, div#vat_view table a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	padding: 6px 0;
-}
-
-div#storage table {
-	width: 800px;
-	margin-left: 70px;
-}
-
-
-div#storage a {
-	text-decoration: none;
 }

@@ -11,7 +11,7 @@ get_header(); ?>
 			<div id="content" role="main">
 			    
 				<?php 
-				    include_search_form("/worm-portal/worm-strains/", "", "search strains", "");
+				    include_search_form("/worm-strains/", "", "search strains", "");
                 	// get the strain name from the URL
     				$strain = mysql_real_escape_string($_GET["strain"]);
 
@@ -76,69 +76,65 @@ get_header(); ?>
 
     			<!-- STRAIN OVERVIEW SECTION-->
 
-				<div class="strainSection">
+				<div class="strain-section">
 					<?php
-						if ($strain != NULL) {
-							echo "<div class='strainData'><b>Strain:</b>&nbsp;$strain</div>";
-						}
+						if ($strain)
+							echo "<div class='strain-data'><b>Strain:</b>&nbsp;$strain</div>";
 
-						if ($species != NULL) {
-							echo "<div class='strainData'><b>Species:</b>&nbsp;<i>$species</i></div>";
-						}
+						if ($species)
+							echo "<div class='strain-data'><b>Species:</b>&nbsp;<i>$species</i></div>";
 
 						if ($wormbase == 1) {
 							// create link to wormbase using generate_wormbase()
-							echo "<div class='strainData'>
+							echo "<div class='strain-data'>
 								<a href='" . generate_wormbase($strain) . "' target='_blank'>
 									See strain on WormBase
 								</a>
 							</div>";
 						}
 
-						if ($genotype != NULL) {
-							echo "<div class='strainData'><b>Genotype:</b>&nbsp;$genotype</div>";
-						}
+						if ($genotype) 
+							echo "<div class='strain-data'><b>Genotype:</b>&nbsp;$genotype</div>";
 
-						if ($culture != NULL) {
-							echo "<div class='strainData'><b>Culture:</b>&nbsp;$culture</div>";
-						}
+						if ($culture)
+							echo "<div class='strain-data'><b>Culture:</b>&nbsp;$culture</div>";
 					?>
 				</div>
 
 				<!-- ORIGIN SECTION-->
 
 				<?php
-					if ($author != NULL || $lab != NULL || $date_created != NULL || $mutagen != NULL || $outcrossed != NULL) {
+					if ($author || $lab || $date_created || $mutagen || $outcrossed) {
 						echo "
 							<div class='line'></div>
-							<div class='strainSection'>
+							<div class='strain-section'>
 								<h3>Origin</h3>
 							";
-						if ($author != NULL) {
-							echo "<div class='strainData'><b>Made By:</b>&nbsp;$author</div>";
-						}
-						if ($lab != NULL) {
-							echo "<div class='strainData'><b>Lab:</b>&nbsp;$lab</div>";
-						}
-						if ($date_created != NULL) {
-							echo "<div class='strainData'><b>Date Created:</b>&nbsp;$date_created</div>";
-						}
-						if ($mutagen != NULL) {
-							echo "<div class='strainData'><b>Mutagen or Method Used:</b>&nbsp;$mutagen</div>";
-						}
-						if ($outcrossed != NULL) {
+						if ($author)
+							echo "<div class='strain-data'><b>Made By:</b>&nbsp;$author</div>";
+						
+						if ($lab)
+							echo "<div class='strain-data'><b>Lab:</b>&nbsp;$lab</div>";
+						
+						if ($date_created)
+							echo "<div class='strain-data'><b>Date Created:</b>&nbsp;$date_created</div>";
+						
+						if ($mutagen)
+							echo "<div class='strain-data'><b>Mutagen or Method Used:</b>&nbsp;$mutagen</div>";
+						
+						if ($outcrossed)
 							// Add an "x" to the number of times outcrossed
-							echo "<div class='strainData'><b>Outcrossed:</b>&nbsp;" . $outcrossed . "x</div>";
-						}
+							echo "<div class='strain-data'><b>Outcrossed:</b>&nbsp;" . $outcrossed . "x</div>";
+						
 						echo "</div>";
 					}
 
-					if ($remarks != NULL) {
+					if ($remarks) {
 						echo "
 							<div class='line'></div>
-							<div class='strainSection'>
+							<div class='strain-section'>
 								<h3>Remarks</h3>
-								<div class='strainData'>$remarks</div>
+								<div class='strain-data'>$remarks</div>
 							</div>
 						";
 					}
@@ -172,40 +168,37 @@ get_header(); ?>
 
 					$numrows = mysql_num_rows($result);
 
-					if ($received_from != NULL || $received_by != NULL || $date_received != NULL || $numrows > 0) {
+					if ($received_from || $received_by || $date_received || $numrows > 0) {
 						echo " 
 							<div class='line'></div>
-							<div class='strainSection'>
+							<div class='strain-section'>
 								<h3>Stock</h3>";
 
-						if ($received_from != NULL) {
-							echo "<div class='strainData'><b>Received From:</b>&nbsp;$received_from</div>";
-						}
+						if ($received_from)
+							echo "<div class='strain-data'><b>Received From:</b>&nbsp;$received_from</div>";
 
-						if ($received_by != NULL) {
+						if ($received_by) {
 						    $query2 = "SELECT author FROM authors WHERE id = '$received_by'";
 						    $result2 = mysql_query($query2);
         					if (!$result2) {
         						echo 'Could not run query: ' . mysql_error();
         						exit;
         					}
-        					while ($row2 = mysql_fetch_assoc($result2)) {
+        					while ($row2 = mysql_fetch_assoc($result2))
         					    $received_author = $row2['author'];
-        					}
 
-							echo "<div class='strainData'><b>Received By:</b>&nbsp;$received_author</div>";
+							echo "<div class='strain-data'><b>Received By:</b>&nbsp;$received_author</div>";
 						}
 
-						if ($date_received != NULL) {
-							echo "<div class='strainData'><b>Date Received:</b>&nbsp;$date_received</div>";
-						}
+						if ($date_received)
+							echo "<div class='strain-data'><b>Date Received:</b>&nbsp;$date_received</div>";
                         
                         echo "</div>";
                         
 						$letter_array=array('A','B','C','D','E','F','G','H','I');
                         
-                        echo "<div class='strainSection'>";
-    						while ($row=mysql_fetch_assoc($result)) {
+                        echo "<div class='strain-section'>";
+    						while ($row = mysql_fetch_assoc($result)) {
     							// Assign variables //
     							$vat_name = $row['vat_name'];
     							$rack_name = $row['rack_name'];
@@ -215,13 +208,11 @@ get_header(); ?>
     							$freeze_date = $row['freeze_date'];
     							$frozen_by = $row['author'];
 
-    							if ($freeze_date) {
+    							if ($freeze_date)
     								$freeze_date = reconfigure_date($freeze_date);
-    							}
-
 
     							echo "
-    								<div class='freezeData'>
+    								<div class='freeze-data'>
     									<b>$vat_name:</b>
     									$rack_name-$box_name-$vertical_position$horizontal_position<br>
     									Frozen $freeze_date by $frozen_by<br>	

@@ -6,13 +6,13 @@
         and an option message for input format. */
         function include_search_form($action_url, $message, $search_term, $small_message) {
             echo "
-                <form class='searchForm' method='GET' action='$action_url'>
+                <form class='search-form' method='GET' action='$action_url'>
                 	$message &nbsp;
                 	<input type='text' name='search_term' value='";
                 	mysql_real_escape_string($_GET['search_term']);
                 	echo "';></input>
                 	<input type='submit' value='$search_term'></input><br>
-                	<span class='smallMessage'>$small_message</span>
+                	<span class='small-message'>$small_message</span>
                 </form>
             ";
         }
@@ -66,7 +66,7 @@
 		}
 		
 		// if there is a transgene id provided
-		if ($transgene_id != NULL) {
+		if ($transgene_id) {
 			// retrieve and define the transgene template
 			$query = "SELECT transgene.name AS transgene_name, 
 					vector.gene, vector.sequence,
@@ -94,7 +94,7 @@
 			}
 			
 			// if the gene is null, use the sequence
-			if ($gene == NULL) {
+			if (!$gene) {
 				$gene = $sequence;
 			}
 			
@@ -118,6 +118,7 @@
 	    returns nothing. */
 
 	function rack_contents($rack_id, $slots_horizontal_count, $slots_vertical_count) {
+		
 		// get box information for all boxes in the rack //
 		$query = "SELECT storage_box.box_name, storage_box.id AS box_id, 
 				storage_box.old_location, authors.author
@@ -134,9 +135,10 @@
 			exit;
 		}
 		
-		if (mysql_num_rows($result) == 0) {
-			echo "<td class='emptyEmphasis'>No Record</td>";
-		} else {
+		if (mysql_num_rows($result) == 0)
+			echo "<td>No Record</td>";
+			
+		else {
 			while ($row = mysql_fetch_assoc($result)) {
 				// Assign variables //
 				$box_name = $row['box_name'];
@@ -144,44 +146,17 @@
 				$old_location = $row['old_location'];
 				$author = $row['author'];
 				
-				if ($old_location != NULL) {
-					if ($box_name != NULL && $author != NULL) {
-						echo "<td class='wholeLink'><a href='/storage/tube_view.php?box_id=$box_id'>$box_name
-							<br>$author
-							<br>prev: $old_location
-						</a></td>";
-					} else {
-						if ($box_name != NULL) {
-							echo "<td class='wholeLink'><a href='/storage/tube_view.php?box_id=$box_id'>$box_name
-								<br>prev: $old_location
-							</a></td>";
-						} else {
-							if ($author != NULL) {
-								echo "<td class='wholeLink'><a href='/storage/tube_view.php?box_id=$box_id'>$author
-									<br>prev: $old_location
-								</a></td>";
-							} else {
-								echo "<td>Empty Space</td>";
-							}
-						}
-					}
-				} else {
-					if ($box_name != NULL && $author != NULL) {
-						echo "<td class='wholeLink'><a href='/storage/tube_view.php?box_id=$box_id'>$box_name
-							<br>$author
-						</a></td>";
-					} else {
-						if ($box_name != NULL) {
-							echo "<td class='wholeLink'><a href='/storage/tube_view.php?box_id=$box_id'>$box_name</a></td>";
-						} else {
-							if ($author != NULL) {
-								echo "<td class='wholeLink'><a href='/storage/tube_view.php?box_id=$box_id'>$author</a></td>";
-							} else {
-								echo "<td>Empty Space</td>";
-							}
-						}
-					}
-				}
+				if ($box_name || $author) {
+				    echo "<td><a href='/storage-tubes/?box_id=$box_id'>";
+				    if ($box_name) 
+				        echo "$box_name<br>";
+				    if ($author)
+				        echo "$author<br>";
+				    if ($old_location)
+				        echo "prev:$old_location";
+				    echo "</a></td>";
+				} else
+				    echo "<td>Empty Space</td>";
 			}
 		}
 	}

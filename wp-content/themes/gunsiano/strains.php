@@ -14,8 +14,8 @@ get_header(); ?>
 				<!-- Display the title -->	
 				<h1 class="entry-title no-clear">Worm Strains</h1>
 				
-				<table id="strains">
-    				<tr id="topRow">
+				<table id="grid">
+    				<tr id="top-row">
     						<td>Strain</td>
     						<td>Species</td>
     						<td>Genotype</td>
@@ -102,7 +102,7 @@ get_header(); ?>
     						// If there isn't a search term
     						} else {
     							// if strain isn't null, print all fields
-    							if ($strain != NULL) {
+    							if ($strain) {
     								echo "
     									<tr>
     										<td><a href='/worm-strain/?strain=$strain'>$strain</a></td>
@@ -114,7 +114,7 @@ get_header(); ?>
     							}
     						}
     					}
-    					echo "<span class=strainSearch>";
+    					echo "<span class=strain-search>";
     					if ($search_counter) {
     						echo "$search_counter out of $base_counter strains match search term '$search_term'";
     					} else {
