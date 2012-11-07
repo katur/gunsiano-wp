@@ -136,7 +136,7 @@
 		}
 		
 		if (mysql_num_rows($result) == 0)
-			echo "<td>No Record</td>";
+			echo "<td class='no-record'>No Record</td>";
 			
 		else {
 			while ($row = mysql_fetch_assoc($result)) {
@@ -147,14 +147,26 @@
 				$author = $row['author'];
 				
 				if ($box_name || $author) {
-				    echo "<td><a href='/storage-tubes/?box_id=$box_id'>";
+				    echo "<td>";
+				    $query2 = "SELECT * FROM storage_tube WHERE storage_tube.box_id = $box_id";
+				    $result2 = mysql_query($query2);
+				    if (!$result2) {
+            			echo 'Could not run query: ' . mysql_error();
+            			exit;
+            		}
+            		
+            		if (mysql_num_rows($result2) != 0)
+            		    echo "<a href='/storage-tubes/?box_id=$box_id'>";
 				    if ($box_name) 
 				        echo "$box_name<br>";
 				    if ($author)
 				        echo "$author<br>";
 				    if ($old_location)
 				        echo "prev:$old_location";
-				    echo "</a></td>";
+				    if (mysql_num_rows($result2) != 0)
+            		    echo "</a>";
+				    
+				    echo "</td>";
 				} else
 				    echo "<td>Empty Space</td>";
 			}

@@ -183,9 +183,6 @@ body {
 	margin: 2em auto;
 	max-width: 1000px;
 }
-#branding hgroup {
-	margin: 0 7.6%;
-}
 #access div {
 	margin: 0 7.6%;
 }
@@ -618,6 +615,25 @@ a:hover {
 /* =Header
 ----------------------------------------------- */
 
+#site-title-whole {
+	clear: none;
+	float: left;
+	width: 45%;
+	margin: 0 7.6%;
+}
+
+#header-video {
+	display: table-cell;
+	vertical-align: middle;
+	float: right;
+	width: 32%;
+	margin: 1% 7.6% 1% 0;
+}
+
+/* #branding hgroup {
+	margin: 0 7.6%;
+} this used to be in Structure section */
+
 #branding {
 	border-top: 2px solid #bbb;
 	padding-bottom: 10px;
@@ -625,16 +641,16 @@ a:hover {
 	z-index: 9999;
 }
 #site-title {
-	margin-right: 270px;
+	clear: none;
+	float: left;
 	padding: 3.65625em 0 0;
 }
 #site-title a {
 	font-family: 'Marcellus SC', serif;
 	color: #111;
 	font-size: 36px;
-	font-weight: bold;
-	/*font-variant:small-caps;*/
 	line-height: 36px;
+	font-weight: bold;
 	text-decoration: none;
 }
 #site-title a:hover,
@@ -643,9 +659,11 @@ a:hover {
 	color: #1982d1;
 }
 #site-description {
+	clear: none;
+	float: left;
 	color: #7a7a7a;
 	font-size: 14px;
-	margin: 0 270px 3.65625em 0;
+	margin: 0 0 3.65625em 0;
 }
 #branding img {
 	height: auto;
@@ -2871,6 +2889,20 @@ a.no-style {
 
 /* Grid-style table for Strains page, Frozen stocks pages
 ------------------------------------------------*/
+/*#grid {
+	max-width: 100%;
+}
+
+#grid table {
+	width: 100%;
+	margin: 20px 0;
+	border: solid #AAA;
+	border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+	overflow: auto;
+} 
+*/
 #grid {
 	width: 100%;
 	margin: 20px 0;
@@ -2929,6 +2961,12 @@ a.no-style {
 
 .freeze-date {
 	font-size: 14px;
+}
+
+.no-record {
+	color: #FF1493;
+	font-weight: bold;
+	vertical-align: middle;
 }
 
 

@@ -59,7 +59,6 @@ get_header(); ?>
 							echo "<tr>";
 								$horizontal_count = 1;
 								while ($horizontal_count <= $tubes_horizontal) {
-									echo "<td>";
 										$query = "SELECT storage_tube.id, storage_tube.vertical_position, 
 												storage_tube.horizontal_position, storage_tube_ref.tube_contents, 
 												storage_tube_ref.freeze_date, authors.initials, strains.strain
@@ -82,10 +81,11 @@ get_header(); ?>
 
 										// If no result
 										if (mysql_num_rows($result) == 0) {
-											echo "<span>No Record</span>";
+											echo "<td class='no-record'>No Record</td>";
 
 										// If result
 										} else {
+										    echo "<td>";
 											while ($row = mysql_fetch_assoc($result)) {
 												// Assign variables //
 												$tube_id = $row['id'];

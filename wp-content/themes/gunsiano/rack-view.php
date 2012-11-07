@@ -51,7 +51,7 @@ get_header(); ?>
 									}
 									
 									if (mysql_num_rows($result) == 0)
-										echo "<td>No Record</td>";
+										echo "<td class='no-record'>No Record</td>";
 										
 									else {
 										while ($row = mysql_fetch_assoc($result)) {
