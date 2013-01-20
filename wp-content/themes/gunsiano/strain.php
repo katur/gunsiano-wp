@@ -92,6 +92,16 @@ get_header(); ?>
 								</a>
 							</div>";
 						}
+						
+						if (preg_match('/fx/i', $strain)) { /* i indicates case-insensitive */
+                	        $sub_strain = substr($strain,2);
+                	        $mitani_url = preg_replace('/strain_fill/', $sub_strain,	     'http://www.shigen.nig.ac.jp/c.elegans/mutants/DetailsSearch?lang=english&seq=strain_fill');
+                	        echo "<div class='strain-data'>
+								<a href='" . $mitani_url . "' target='_blank'>
+									See strain on NBRP
+								</a>
+							</div>";
+                	    }
 
 						if ($genotype) 
 							echo "<div class='strain-data'><b>Genotype:</b>&nbsp;$genotype</div>";

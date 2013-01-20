@@ -1,0 +1,13 @@
+/*1355736928,173220389*/
+
+.uiStreamStory .videoRedesign .uiVideoThumb, .uiStreamStory .videoRedesign .uiVideoThumb img{max-height:none;max-width:none}
+.uiStreamStory .videoRedesign .uiVideoThumb img{display:block}
+.uiStreamStory .videoRedesign .uiVideoThumb i{left:50%;margin:-13px 0 0 -17px;top:50%}
+.uiStreamStory .videoRedesign .uiVideoThumbLoading i{left:0;margin:0;top:0}
+.uiStreamStory .videoRedesign .uiVideoThumb:after{border:1px solid rgba(0, 0, 0, .1);bottom:0;content:'';left:0;position:absolute;right:0;top:0}
+._6xi{width:196px}
+._6xj{width:129px}
+._1g0r{opacity:.3}
+._1g0r:hover{opacity:1}
+
+#bootloader_KjEZC { height: 42px; }

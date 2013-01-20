@@ -1,0 +1,5 @@
+/*1355773389,173220389*/
+
+if (self.CavalryLogger) { CavalryLogger.start_js(["iiLXz"]); }
+
+__d("TypeaheadDetectQueryLocale",["copyProperties"],function(a,b,c,d,e,f){var g=b('copyProperties');function h(i){this._typeahead=i;this._data=i.getData();this._queryCache={'':this._data.queryCache,ja_JP:{},zh_TW:{}};}g(h.prototype,{enable:function(){this._previousLocale='';this._reset=this._typeahead.subscribe('reset',this._swapQueryCache.bind(this,''));this._beforeQuery=this._data.subscribe('beforeQuery',function(i,j){var k=j.value;if(k===''){this._swapQueryCache('');return;}var l=null,m=k.charCodeAt(k.length-1);if(12352<=m&&m<=12543){l='ja_JP';}else if(12544<=m&&m<=12735)l='zh_TW';this._swapQueryCache(l);}.bind(this));},disable:function(){this._swapQueryCache('');this._data.unsubscribe(this._beforeQuery);this._typeahead.ubsubscribe(this._reset);},_swapQueryCache:function(i){if(i===null||i===this._previousLocale)return;this._data.queryCache=this._queryCache[i];this._data.setQueryData({query_locale:i});this._previousLocale=i;}});e.exports=h;});

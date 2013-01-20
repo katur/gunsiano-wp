@@ -422,7 +422,7 @@ body {
 /* MAIN BODY */
 body, input, textarea {
 	color: #373737;
-	font-size: 17px; /*15px*/
+	font-size: 17px;
 	font-family: "Computer Modern Serif","Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.625;
@@ -615,35 +615,19 @@ a:hover {
 /* =Header
 ----------------------------------------------- */
 
-#site-title-whole {
-	clear: none;
-	float: left;
-	width: 45%;
-	margin: 0 7.6%;
-}
-
-#header-video {
-	display: table-cell;
-	vertical-align: middle;
-	float: right;
-	width: 32%;
-	margin: 1% 7.6% 1% 0;
-}
-
-/* #branding hgroup {
-	margin: 0 7.6%;
-} this used to be in Structure section */
-
 #branding {
 	border-top: 2px solid #bbb;
 	padding-bottom: 10px;
 	position: relative;
 	z-index: 9999;
 }
+#branding hgroup {
+	margin: 0 7.6%;
+}
 #site-title {
 	clear: none;
 	float: left;
-	padding: 3.65625em 0 0;
+	padding: 3em 0 0; /* 3.65625em */
 }
 #site-title a {
 	font-family: 'Marcellus SC', serif;
@@ -663,7 +647,7 @@ a:hover {
 	float: left;
 	color: #7a7a7a;
 	font-size: 14px;
-	margin: 0 0 3.65625em 0;
+	margin: 0 0 3em 0; /* 3.65625em */
 }
 #branding img {
 	height: auto;
@@ -2850,6 +2834,97 @@ a.no-style {
 .external {
 	padding-right: 15px;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAElJREFUeNpiZMACInYnzQdSCSA2C5DzHyq+YIXrvER0xSwgAijBiEX3ArgCbJIw05iwOAHVKiQ3YHMoVhNgIAHuBlymgABAgAEAuZUbEqLsuG0AAAAASUVORK5CYII=) center right no-repeat;
+}
+
+/* Home Page */
+#intro {
+	clear: both;
+	font-size: 20px; 
+	color: black;
+	text-align: center;
+	background: #58bb62;
+	font-family: "Computer Modern Bright", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 30px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+#intro a {
+	color: white;
+}
+
+h1#research-areas {
+	clear: none;
+	float: left;
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+
+#research-area {
+	float: right;
+	clear: none;
+	padding: 15px 0 0 0;
+}
+
+#my-gallery {
+	float: left;
+	clear: both;
+	height: 400px;
+}
+
+#thumbnails {
+	float: left;
+	width: 30%;
+}
+
+#thumbnails img, #thumbnails video  {
+	float: left;
+	background: none;
+	opacity: 0.6;
+	padding: 0;
+}
+
+#thumbnails img {
+	width: 35%;
+	margin: 0 10% 10% 0;
+}
+
+#nathalie-video-wrapper {
+	float: left;
+	background-color: #061C03;
+	opacity: 0.6;
+	padding: 0;
+	width: 35%;
+	margin: 0 10% 10% 0;	
+}
+
+#thumbnails video {
+	width: 100%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+#thumbnails img:hover, #thumbnails video:hover, #nathalie-video-wrapper:hover, #thumbnails .active-thumbnail img,
+#thumbnails .active-thumbnail video, #thumbnails .active-thumbnail #nathalie-video-wrapper {
+	opacity: 1;
+}
+
+#theater {
+	float: right;
+	width: 70%;
+	text-align: center;
+}
+
+#theater video, #theater img {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#employment {
+	float: left;
+	clear: both;
+	margin-top: 100px;
 }
 
 

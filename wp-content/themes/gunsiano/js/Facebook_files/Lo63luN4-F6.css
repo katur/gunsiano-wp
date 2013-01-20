@@ -1,0 +1,38 @@
+/*1354592740,178142507*/
+
+.claimCouponDialogBody{padding:5px 10px}
+.couponAttachmentBody{border:2px dashed #d8dfea}
+.fbMainStreamAttachment .couponAttachmentBody{width:394px}
+.couponAttachmentImage{height:86px;margin:3px 0 3px 3px;width:86px}
+.couponAttachmentImageLink{margin:0}
+.couponDescriptionDiv{margin:3px 3px 0 3px}
+.couponActive .couponDescriptionCell:hover .couponTitle{color:inherit;text-decoration:underline}
+.couponGetOffer{color:#3b5998}
+span.couponGetOffer .img{margin-top:1px}
+.mailButton .img{margin-top:5px}
+.couponTitle{margin:3px 10px}
+.couponSubtitle{margin:12px 10px 3px}
+.couponSubtitle, .couponTitle{word-wrap:break-word;word-break:break-word;-webkit-hyphens:auto;hyphens:auto;overflow:hidden}
+.couponInactiveTitle{font-weight:bold;color:#3b5998;font-size:11px}
+.couponSubtitleFirstAction{color:#333}
+.couponAtPageNameText{color:gray;font-weight:normal;text-overflow:ellipsis;overflow:hidden}
+.couponPlainText{color:gray;font-size:11px}
+.couponDescriptionCell{border:1px dotted #ccc;color:#000}
+.couponInactive .couponDescriptionCell:hover{cursor:default}
+.couponMoreInfoContent{width:340px;word-wrap:break-word}
+.couponMoreInfoBody{color:gray;margin:0 10px}
+.couponTickerDialog{border-bottom:1px solid #ccc}
+.couponTickerDialog .couponAttachmentBody{border-width:0;padding-left:10px;margin:0}
+.couponTickerDialog{margin:0 3px}
+.couponTickerDialog .couponAttachmentImage{margin:0}
+.couponTickerDialog .couponDescriptionDiv{margin:0 3px}
+.couponTickerDialogArea .uiStreamAttachments{margin:8px 0 0 0}
+.couponHide{display:none}
+.couponTickerDialog .couponHide{display:inherit}
+.couponMoreInfoContentTitle, .couponMoreInfoContentExpiration{color:#333;margin-right:10px}
+.couponMoreInfoContentTC{color:gray;margin-right:10px;overflow:hidden;text-overflow:ellipsis;white-space:pre-wrap}
+.couponAudienceSelector{color:gray}
+.couponPostOfferText{vertical-align:middle;padding:2px}
+.fbTimelineOneColumn .couponUnit{font-size:15px;line-height:20px;padding-right:35px}
+
+#bootloader_9ID2b { height: 42px; }
