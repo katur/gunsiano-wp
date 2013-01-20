@@ -422,7 +422,7 @@ body {
 /* MAIN BODY */
 body, input, textarea {
 	color: #373737;
-	font-size: 17px;
+	font-size: 18px;
 	font-family: "Computer Modern Serif","Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.625;
@@ -440,7 +440,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 h3 {
 	clear: none;
-	font-size: 14px; /*10px*/
+	font-size: 18px; /*10px*/
 	letter-spacing: 0.1em;
 	line-height: 2.6em;
 	text-transform: uppercase;
@@ -2847,85 +2847,50 @@ a.no-style {
 	padding: 30px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
+	margin: 30px 0;
 }
 
 #intro a {
 	color: white;
 }
 
-h1#research-areas {
-	clear: none;
-	float: left;
-	margin: 0;
-	padding: 10px 0 0 0;
-}
-
-#research-area {
-	float: right;
-	clear: none;
-	padding: 15px 0 0 0;
-}
-
-#my-gallery {
+.research-area {
 	float: left;
 	clear: both;
-	height: 400px;
-}
-
-#thumbnails {
-	float: left;
-	width: 30%;
-}
-
-#thumbnails img, #thumbnails video  {
-	float: left;
-	background: none;
-	opacity: 0.6;
-	padding: 0;
-}
-
-#thumbnails img {
-	width: 35%;
-	margin: 0 10% 10% 0;
-}
-
-#nathalie-video-wrapper {
-	float: left;
-	background-color: #061C03;
-	opacity: 0.6;
-	padding: 0;
-	width: 35%;
-	margin: 0 10% 10% 0;	
-}
-
-#thumbnails video {
+	margin: 1% 0;
 	width: 100%;
-	margin-top: 15%;
-	margin-bottom: 15%;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
 }
 
-#thumbnails img:hover, #thumbnails video:hover, #nathalie-video-wrapper:hover, #thumbnails .active-thumbnail img,
-#thumbnails .active-thumbnail video, #thumbnails .active-thumbnail #nathalie-video-wrapper {
-	opacity: 1;
+.research-area .left {
+	padding: 2% 1% 2% 5%;
 }
 
-#theater {
-	float: right;
-	width: 70%;
-	text-align: center;
+.research-area .right {
+	padding: 2% 5% 2% 1%;
 }
 
-#theater video, #theater img {
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
-#employment {
+.research-area-text {
 	float: left;
-	clear: both;
-	margin-top: 100px;
+	clear: none;
+	width: 55%;
 }
+
+.research-area-image {
+	float: left;
+	clear: none;
+	width: 33%;
+}
+
+.research-area-image img {
+	width: 100%;
+}
+
+.research-area-image video {
+	width: 100%;
+}
+
 
 
 /* Two-column: Used on Lab Members page
@@ -2959,6 +2924,23 @@ h1#research-areas {
 .journal {
 	font-weight: bold;
 	margin-right: 2%;
+}
+
+/* Contact page
+------------------------------------------------*/
+#contact-address {
+	float: left;
+	width: 100%;
+}
+
+#contact-address .column {
+	float: left;
+	width: 50%;
+}
+
+#contact-address .column {
+	float: left;
+	width: 50%;
 }
 
 
