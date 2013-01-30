@@ -72,6 +72,7 @@ get_header(); ?>
 											WHERE storage_tube.box_id = $box_id
 												AND storage_tube.horizontal_position = $horizontal_count
 												AND storage_tube.vertical_position = $vertical_count
+												AND storage_tube.thawed = 0
 										";
 										$result = mysql_query($query);
 										if (!$result) {

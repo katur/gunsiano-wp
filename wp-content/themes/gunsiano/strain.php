@@ -167,6 +167,7 @@ get_header(); ?>
 						LEFT JOIN authors
 							ON authors.id = storage_tube_ref.frozen_by
 						WHERE storage_tube_ref.strain_id = '$strain_id'
+						AND storage_tube.thawed = '0'
 					";
 
 					$result = mysql_query($query);
