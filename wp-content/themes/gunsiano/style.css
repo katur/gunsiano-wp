@@ -438,6 +438,11 @@ body {
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
 }
+h2 {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 10px;
+}
 h3 {
 	clear: none;
 	font-size: 18px; /*10px*/
@@ -2807,10 +2812,14 @@ p.comment-form-comment {
 
 
 /*------------------------------------------------
+--------------------------------------------------
 ~~~~~~~~~~~ STYLES KATHERINE ADDED ~~~~~~~~~~~~~~~
+--------------------------------------------------
 ------------------------------------------------*/
 
-/* Global
+
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~ Global ~~~~~~~~~~~~~~~~~~~~~~
 ----------------------------------------------- */
 a.active {
 	text-decoration: underline;
@@ -2831,6 +2840,11 @@ a.no-style {
 	text-align: center;
 }
 
+.centered-block {
+	display: block; 
+	margin: auto;
+}
+
 .external {
 	padding-right: 15px;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAElJREFUeNpiZMACInYnzQdSCSA2C5DzHyq+YIXrvER0xSwgAijBiEX3ArgCbJIw05iwOAHVKiQ3YHMoVhNgIAHuBlymgABAgAEAuZUbEqLsuG0AAAAASUVORK5CYII=) center right no-repeat;
@@ -2840,7 +2854,65 @@ hgroup {
 	min-height: 158px; /* so the header doesn't resize while font loading */
 }
 
-/* Home Page */
+/* can't get this to work when content is loading */
+.tall-content {
+	min-height: 800px;
+}
+
+/* -----------------------------------------------
+ Search Form: used on Ahringer and Strains Pages
+----------------------------------------------- */
+.small-message {
+	color: #666; 
+	font-size: 13px;
+}
+
+.search-form {
+	float: right;
+	padding-top: 15px;
+}
+
+.strain-search {
+	float: right;
+	clear: both;
+}
+
+.no-clear {
+	clear: none;
+	max-width: 50%;
+}
+
+/* -----------------------------------------------
+~~~~~ Grid: used on Strains and Stocks Pages ~~~~~
+----------------------------------------------- */
+#grid {
+	width: 100%;
+	margin: 20px 0;
+	border: solid #AAA;
+	border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#grid td {
+    border: solid #AAA;
+    border-width: 1px 1px 0 0;
+	margin: 0;
+	padding: 6px;
+}
+
+#top-row td {
+	text-align: center;
+	background: #000;
+	color: #FFF;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------- */
 #post-9 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -2928,7 +3000,8 @@ hgroup {
 }
 
 
-/* Two-column: Used on Lab Members page
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~ Lab Members Page ~~~~~~~~~~~~~~~~~
 ----------------------------------------------- */
 .two-column {
 	float: left;
@@ -2937,7 +3010,8 @@ hgroup {
 }
 
 
-/* Projects page
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~~ Projects Page ~~~~~~~~~~~~~~~~~~~
 ----------------------------------------------- */
 .entry-content .project-table td {
 	vertical-align: top;
@@ -2958,8 +3032,9 @@ table.project-table tr:first-child td {
 }
 
 
-/* Publications page
-------------------------------------------------*/
+/* -----------------------------------------------
+~~~~~~~~~~~~~~ Publications Page ~~~~~~~~~~~~~~~~~
+----------------------------------------------- */
 .publication {
 	margin: 4% 0;
 }
@@ -2969,8 +3044,9 @@ table.project-table tr:first-child td {
 	margin-right: 2%;
 }
 
-/* Contact page
-------------------------------------------------*/
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~~ Contact Page ~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------- */
 #contact-address {
 	float: left;
 	width: 100%;
@@ -2987,72 +3063,9 @@ table.project-table tr:first-child td {
 }
 
 
-/* Grid-style table for Strains page, Frozen stocks pages
-------------------------------------------------*/
-/*#grid {
-	max-width: 100%;
-}
-
-#grid table {
-	width: 100%;
-	margin: 20px 0;
-	border: solid #AAA;
-	border-width: 0 0 1px 1px;
-    border-spacing: 0;
-    border-collapse: collapse;
-	overflow: auto;
-} 
-*/
-#grid {
-	width: 100%;
-	margin: 20px 0;
-	border: solid #AAA;
-	border-width: 0 0 1px 1px;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
-#grid td {
-    border: solid #AAA;
-    border-width: 1px 1px 0 0;
-	margin: 0;
-	padding: 6px;
-}
-
-#top-row td {
-	text-align: center;
-	background: #000;
-	color: #FFF;
-	font-size: 15px;
-	font-weight: bold;
-}
-
-
-/* Search Form for Strains page, Stamps pages
-------------------------------------------------*/
-.small-message {
-	color: #666; 
-	font-size: 13px;
-}
-
-.search-form {
-	float: right;
-	padding-top: 15px;
-}
-
-.strain-search {
-	float: right;
-	clear: both;
-}
-
-.no-clear {
-	clear: none;
-	max-width: 50%;
-}
-
-
-/* Frozen Stocks pages
-------------------------------------------------*/
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~~~~ Stocks Page ~~~~~~~~~~~~~~~~~~~
+----------------------------------------------- */
 .vat-image {
 	float: left;
 	padding: 20px;
@@ -3070,8 +3083,9 @@ table.project-table tr:first-child td {
 }
 
 
-/* Strains page
-------------------------------------------------*/
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~~~~ Strains Page ~~~~~~~~~~~~~~~~~~
+----------------------------------------------- */
 .strain-section {
 	position: relative;
 	right: 2%;
@@ -3106,8 +3120,9 @@ table.project-table tr:first-child td {
 }
 
 
-/* Bacterial Stamps pages
-------------------------------------------------*/
+/* -----------------------------------------------
+~~~~~~~~~~~~~~~~~~ Stamps Page ~~~~~~~~~~~~~~~~~~~
+----------------------------------------------- */
 
 div.status0 {
 	background: #635335;
@@ -3121,7 +3136,11 @@ div.status2 {
 	background: #4B2;
 }
 
-div#hoverClone {
+div.badMatch {
+	color: #F00;
+}
+
+div#hover-clone {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
@@ -3130,8 +3149,6 @@ div#hoverClone {
 	padding: 5px;
 	display: none;
 }
-
-/* ~~~~~~~~ STAMP VISUALIZATION: LARGE SIZE (LIBRARY_VIEW) ~~~~~~~~ */
 
 div.plate {
 	width: 684px;
@@ -3147,53 +3164,11 @@ div.well {
 	width: 45px;
 	height: 45px;
 	margin: 5px;
-	color: #DDD;
-}
-
-/* ~~~~~~~~ STAMP VISUALIZATION: SMALL SIZE (PLATE_RECORDS) ~~~~~~~~ */
-
-div.plateRow {
-	float: left;
-	clear: both;
-}
-
-
-div.plateWrap {
+	color: #fff;
 	text-align: center;
-	width: 372px;
-	float: left;
-	margin-left: 72px;
 }
 
-div.plateSmall {
-	width: 372px;
-	height: 248px;
-	background: #635335;
-	border: 5px solid #635335;
-}
-
-div.wellSmall {
-	float: left;
-	border: 1px solid #635335;
-	width: 25px;
-	height: 25px;
-	margin: 2px;
-	color: #EEE;
-	font-size: 12px;	
-}
-
-div.badMatch {
-	color: #F00;
-}
-
-div.comments {
-	text-align: left;
-	font-size: 12px;
-}
-
-/* ~~~~~~~~ STAMP VISUALIZATION: MEDIUM SIZE (NEW_STAMP) ~~~~~~~~ */
-
-div.plateMedium {
+div.plate-medium {
 	width: 636px;
 	height: 368px;
 	background: #635335;
@@ -3201,18 +3176,66 @@ div.plateMedium {
 	margin: 0 auto;
 }
 
-div.wellMedium {
+div.well-medium {
 	float: left;
 	border: 1px solid #635335; 
 	width: 40px;
 	height: 40px;
 	margin: 2px;
-	color: #DDD;
+	color: #fff;
 }
+
+.plate-small {
+	width: 372px;
+	height: 248px;
+	background: #635335;
+	border: 5px solid #635335;
+}
+
+div.well-small {
+	float: left;
+	border: 1px solid #635335;
+	width: 25px;
+	height: 25px;
+	margin: 2px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* plate-row contains two small plates */
+div.plate-row {
+	clear: both;
+	float: left;
+	margin-top: 40px;
+	width: 100%;
+}
+
+/* plateWrap wraps one small plate plus accompanying text */
+.left-plate-wrap {
+	float: left;
+	text-align: center;
+}
+
+.right-plate-wrap {
+	float: right;
+	text-align: center;
+}
+
+div.comments {
+	text-align: left;
+	font-size: 12px;
+}
+
+span.stamp-source {
+	font-size: 12px;
+	margin-left: 20px;
+}
+
 
 /* ~~~~~~~~ NEW_STAMP PAGE ~~~~~~~~ */
 
-div.commentButton {
+div.comment-button {
 	float: left;
 	border: 1px solid #666;
 	width: 5px;
@@ -3220,7 +3243,7 @@ div.commentButton {
 	background: #000;
 }
 
-div.commentPopup {
+div.comment-popup {
 	position: absolute;
 	background: #DDD;
 	border: 1px solid #AAA;
