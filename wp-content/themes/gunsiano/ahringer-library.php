@@ -23,11 +23,20 @@ get_header(); ?>
     						WHERE library.plate_id = '$search_term'
     						LIMIT 1
     					";
+    					/* if clone search: $query = "SELECT library.plate_id, library.well_position, library.clone, library.node_primary_name, library.gene
+    						FROM library
+    						WHERE library.clone LIKE '$search_term'
+    						OR library.node_primary_name LIKE '$search_term'
+    						OR library.gene LIKE '$search_term'
+    						LIMIT 1
+    					";*/
     					$result = mysql_query($query);
     					if (!$result) {
     						echo 'Could not run query: ' . mysql_error();
     						exit;
     					}
+    					
+
     					
     					// if search term is a valid plate name
     					if (mysql_num_rows($result) != 0) {	
@@ -37,6 +46,15 @@ get_header(); ?>
     								echo "<h2>$plate_id</h2>";
     							else 
     								echo "<h2>Vidal $plate_id</h2>";
+    							/* if clone search: $plate_id = $row['plate_id'];
+    							$well_position = $row['well_position'];
+    							$clone = $row['clone'];
+    							$node_primary_name = $row['node_primary_name'];
+    							$gene = $row['gene'];
+    							if (preg_match("/-/", $plate_id))
+    								echo "<h1>$gene: well $well_position of $plate_id</h1>";
+    							else
+    								echo "<h1>$gene: well $well_position of Vidal $plate_id</h1>"; */
     						}
 
     						echo "<div class='plate'>";

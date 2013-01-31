@@ -69,6 +69,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/home-page.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/contact-info.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/publications.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/ahringer-popup.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
