@@ -88,7 +88,7 @@ get_header(); ?>
 							// create link to wormbase using generate_wormbase()
 							echo "<div class='strain-data'>
 								<a href='" . generate_wormbase($strain) . "' target='_blank'>
-									See strain on WormBase
+									See strain on WormBase.org
 								</a>
 							</div>";
 						}
