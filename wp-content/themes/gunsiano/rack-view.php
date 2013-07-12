@@ -1,11 +1,11 @@
-<?php
+<?php get_header();
 /*
 Template Name: Rack View
 Copyright (c) 2010-2012 Katherine Erickson
 */
 include("katherine_functions.php");
 include("katherine_connect.php");
-get_header(); ?>
+?>
 		<div id="primary">
 			<div id="content" role="main">					
 

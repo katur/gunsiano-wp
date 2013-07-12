@@ -1,12 +1,12 @@
-<?php
+<?php get_header();
 include("katherine_functions.php");
 include("katherine_connect.php");
+?>
 /*
 Template Name: Ahringer Library
 Copyright (c) 2010-2013 Katherine Erickson
 */
 
-get_header(); ?>
 		<div id="primary">
 			<div id="content" class="tall-content" role="main">
 

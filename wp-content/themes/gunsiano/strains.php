@@ -1,4 +1,4 @@
-<?php
+<?php get_header();
 
 /*
 Template Name: Strains
@@ -6,7 +6,8 @@ Copyright (c) 2010-2012 Katherine Erickson
 */
 include("katherine_functions.php");
 include("katherine_connect.php");
-get_header(); ?>
+?>
+
 		<div id="primary">
 			<div id="content" role="main">
 				<?php include_search_form("/worm-strains/", "", "search strains", "");?>

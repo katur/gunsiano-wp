@@ -1,12 +1,12 @@
-<?php
+<?php get_header();
 include("katherine_functions.php");
 include("katherine_connect.php");
 /*
 Template Name: Strain
 Copyright (c) 2010-2012 Katherine Erickson
-*/
+ */
+?>
 
-get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 			    
